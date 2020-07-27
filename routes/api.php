@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+/*Rota para donwload*/
+Route::post('/imageupload', 'Admin\UploadController@imageupload')->name('imageupload');
+
+
+
+//Route::post('/imageupload', function(Request $request){
+    //transforma em json
+   // return [
+      //  'location'=> 'https://www.google.com.br/google.jpg'
+  //  ];
+//})->name('imageupload');

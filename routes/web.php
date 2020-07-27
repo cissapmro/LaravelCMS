@@ -28,6 +28,10 @@ Route::prefix('painel')->group(function(){
         Route::get('profile', 'Admin\ProfileController@index')->name('profile');
         Route::put('profilesave', 'Admin\ProfileController@save')->name('profile.save');
 
+        Route::get('setting', 'Admin\SettingController@index')->name('setting');
+        Route::put('settingsave', 'Admin\SettingController@save')->name('setting.save');
+
+        Route::resource('pages', 'Admin\PageController');
 
     //  Route::get('users', 'Admin\UserController@index')->name('users');
     //GRID
@@ -36,3 +40,5 @@ Route::prefix('painel')->group(function(){
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::fallback('Site\PageController@index');

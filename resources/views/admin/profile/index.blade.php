@@ -1,4 +1,4 @@
-<!--<script src="{{ asset('minha_lib/arquivo.js') }}"> </script>-->
+<!--<script src="{{ asset('assets/arquivo.js') }}"> </script>-->
 
 @extends('adminlte::page')
 @section('title', 'profile')
